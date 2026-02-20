@@ -1,0 +1,162 @@
+.section {
+  padding: var(--section-padding);
+  position: relative;
+  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.cardWrapper {
+  width: 100%;
+}
+
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  border-color: rgba(200, 169, 97, 0.25);
+  box-shadow: var(--shadow-glow);
+}
+
+.cardAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-gold), transparent);
+  border-radius: 0 2px 2px 0;
+}
+
+.cardTag {
+  display: inline-flex;
+  padding: 6px 16px;
+  background: rgba(200, 169, 97, 0.08);
+  border: 1px solid rgba(200, 169, 97, 0.15);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+}
+
+.cardText {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.missionList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.missionList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 1.02rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.cardDecor {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  pointer-events: none;
+  opacity: 0.05;
+}
+
+.decorRing {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--color-gold);
+}
+
+.decorDiamond {
+  width: 120px;
+  height: 120px;
+  border: 3px solid var(--color-gold);
+  transform: rotate(45deg);
+}
+
+.taglines {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.tagline {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.tagQuote {
+  color: var(--color-gold);
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 36px 28px;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+}
