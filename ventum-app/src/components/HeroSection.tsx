@@ -60,7 +60,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className={styles.badgeDot} />
-            UAE-Licensed Financial Advisory
+            Licensed Financial Advisory
           </motion.div>
 
           <motion.h1

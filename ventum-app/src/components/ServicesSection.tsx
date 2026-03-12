@@ -15,12 +15,51 @@ const services = [
         stroke="currentColor"
         strokeWidth="1.5"
       >
+        <circle cx="18" cy="18" r="3" />
+        <circle cx="6" cy="6" r="3" />
+        <path d="M13 6h3a2 2 0 0 1 2 2v7" />
+        <path d="M11 18H8a2 2 0 0 1-2-2V9" />
+      </svg>
+    ),
+    title: "Mergers & Acquisitions",
+    description:
+      "Expert M&A advisory services guiding transactions from due diligence to successful integration.",
+  },
+  {
+    icon: (
+      <svg
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      >
         <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
       </svg>
     ),
     title: "Financial Advisory & Planning",
     description:
       "Comprehensive financial planning consultancy to support informed decision-making and sustainable growth.",
+  },
+  {
+    icon: (
+      <svg
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      >
+        <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" />
+        <path d="M3 5v14a2 2 0 0 0 2 2h16v-5" />
+        <path d="M18 12a2 2 0 0 0 0 4h4v-4z" />
+      </svg>
+    ),
+    title: "Loan Arrangements",
+    description:
+      "Strategic loan arrangement and financial structuring services for optimal capital acquisition.",
   },
   {
     icon: (
@@ -39,42 +78,6 @@ const services = [
     title: "Business & Management Consulting",
     description:
       "Strategic business consulting to optimize operations and drive organizational excellence.",
-  },
-  {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <path d="M3 3v18h18" />
-        <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" />
-      </svg>
-    ),
-    title: "Budgeting & Forecasting",
-    description:
-      "Data-driven budgeting and forecasting models to anticipate market trends and plan resources effectively.",
-  },
-  {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
-      </svg>
-    ),
-    title: "Cash Flow & Cost Optimization",
-    description:
-      "Cash flow management and cost optimization advisory to maximize profitability and financial efficiency.",
   },
   {
     icon: (
@@ -176,25 +179,6 @@ const services = [
         stroke="currentColor"
         strokeWidth="1.5"
       >
-        <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" />
-        <path d="M3 5v14a2 2 0 0 0 2 2h16v-5" />
-        <path d="M18 12a2 2 0 0 0 0 4h4v-4z" />
-      </svg>
-    ),
-    title: "Loan Arrangements",
-    description:
-      "Strategic loan arrangement and financial structuring services for optimal capital acquisition.",
-  },
-  {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
         <circle cx="11" cy="11" r="8" />
         <path d="M21 21l-4.35-4.35" />
       </svg>
@@ -269,31 +253,11 @@ const services = [
         stroke="currentColor"
         strokeWidth="1.5"
       >
-        <circle cx="18" cy="18" r="3" />
-        <circle cx="6" cy="6" r="3" />
-        <path d="M13 6h3a2 2 0 0 1 2 2v7" />
-        <path d="M11 18H8a2 2 0 0 1-2-2V9" />
-      </svg>
-    ),
-    title: "Mergers & Acquisitions",
-    description:
-      "Expert M&A advisory services guiding transactions from due diligence to successful integration.",
-  },
-  {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
         <polyline points="9 22 9 12 15 12 15 22" />
       </svg>
     ),
-    title: "Design & Landscaping Survey",
+    title: "Landscaping Survey",
     description:
       "Professional design and landscaping survey services for real estate and urban development projects.",
   },
@@ -315,6 +279,38 @@ export default function ServicesSection() {
             spectrum of advisory services tailored to businesses operating in
             the Gulf region and beyond.
           </p>
+          <div className={styles.feasibilityBlock}>
+            <h3 className={styles.feasibilityTitle}>
+              Preparing Technical &amp; Feasibility Studies of Projects and
+              Opportunities
+            </h3>
+            <p className={styles.feasibilityTags}>
+              Water, Clean Energy, Waste Management &amp; Recycling, Food
+              Security, Energy Efficiency &amp; Environmental Business Services
+            </p>
+            <p className={styles.feasibilitySubtitle}>
+              Ventum Consulting (Digital &amp; Sustainable Transformation
+              Services)
+            </p>
+            <ul className={styles.feasibilityList}>
+              <li>
+                Sustainable transformation strategy, including ESG integration at
+                both strategic and operational levels.
+              </li>
+              <li>
+                Data-driven feasibility assessments and KPI frameworks for
+                environmental business planning.
+              </li>
+              <li>
+                Process and organizational alignment for sustainability and
+                circular economy models.
+              </li>
+              <li>
+                Digitalization strategy to support operational and environmental
+                feasibility studies.
+              </li>
+            </ul>
+          </div>
         </FadeUp>
 
         <StaggerContainer className={styles.grid} staggerDelay={0.06}>

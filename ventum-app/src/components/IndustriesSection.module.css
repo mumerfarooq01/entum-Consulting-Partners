@@ -1,0 +1,120 @@
+.section {
+  padding: var(--section-padding);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .section-label::before {
+  display: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.card {
+  position: relative;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: 14px;
+  padding: 36px 24px;
+  text-align: center;
+  transition: var(--transition-base);
+  cursor: default;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(200, 169, 97, 0.08) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 169, 97, 0.2);
+  box-shadow: var(--shadow-glow);
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.cardIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: rgba(200, 169, 97, 0.07);
+  border: 1px solid rgba(200, 169, 97, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--color-gold);
+  transition: var(--transition-base);
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover .cardIcon {
+  background: rgba(200, 169, 97, 0.14);
+  border-color: rgba(200, 169, 97, 0.25);
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.cardDesc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .card {
+    padding: 28px 18px;
+  }
+}

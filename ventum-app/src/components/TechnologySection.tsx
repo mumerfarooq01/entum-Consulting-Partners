@@ -102,6 +102,23 @@ const features = [
     description:
       "Enterprise-grade digital data handling with advanced confidentiality and security protocols.",
   },
+  {
+    icon: (
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      >
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+      </svg>
+    ),
+    title: "Energy Efficiency System Integration",
+    description:
+      "Smart energy efficiency solutions integrating advanced systems to optimize consumption and reduce operational costs.",
+  },
 ];
 
 export default function TechnologySection() {

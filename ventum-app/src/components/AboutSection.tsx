@@ -5,10 +5,10 @@ import { FadeUp, SlideLeft, SlideRight } from "./ScrollAnimations";
 import styles from "./AboutSection.module.css";
 
 const stats = [
+  { number: "45+", label: "Years", desc: "Industry Experience" },
   { number: "7", label: "Emirates", desc: "Full UAE Coverage" },
   { number: "16+", label: "Services", desc: "Advisory Domains" },
   { number: "100%", label: "Compliant", desc: "UAE Regulations" },
-  { number: "24/7", label: "Support", desc: "Digital Advisory" },
 ];
 
 export default function AboutSection() {
@@ -24,16 +24,24 @@ export default function AboutSection() {
               <span className="gold">Global Reach.</span>
             </h2>
             <p className="section-description">
-              Ventum Consulting Partners is a UAE-licensed professional firm
-              providing financial advisory and business consultancy services.
-              Operating from the United Arab Emirates, we deliver
-              technology-driven, compliant, and globally aligned advisory
-              solutions to clients across all Emirates and internationally.
+              With over 45 years of industry experience, Ventum Consulting
+              Partners is a UAE-licensed professional firm providing financial
+              advisory and business consultancy services. Operating from the
+              United Arab Emirates, we deliver technology-driven, compliant, and
+              globally aligned advisory solutions to clients across all Emirates
+              and internationally.
             </p>
             <p className={styles.secondPara}>
               Our advisory services are designed to support informed financial
               decision-making, operational efficiency, and sustainable business
               growth for SMEs, corporates, and entrepreneurs.
+            </p>
+            <p className={styles.secondPara}>
+              Ventum Consulting is an independent management and transformation
+              consultancy with nearly 20 years of experience integrating
+              strategy, sustainability, and digital transformation into business
+              models across sectors. Our services help organizations align
+              operational capability with environmental and ESG objectives.
             </p>
             <div className={styles.features}>
               <div className={styles.feature}>
