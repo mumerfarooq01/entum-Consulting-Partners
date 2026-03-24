@@ -7,17 +7,18 @@ const quickLinks = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Technology", href: "#technology" },
+  { label: "Financing", href: "#financing" },
+  { label: "Portfolio", href: "#portfolio" },
   { label: "Contact", href: "#contact" },
 ];
 
 const services = [
-  "Financial Advisory",
-  "Business Consulting",
-  "Mergers & Acquisitions",
-  "Risk Assessment",
-  "HR Advisory",
-  "Engineering Services",
+  "Project Development Advisory",
+  "PPP & Concessions",
+  "Project Finance",
+  "Feasibility & Bankability",
+  "ECA & International Financing",
+  "Infrastructure Structuring",
 ];
 
 export default function Footer() {
@@ -41,9 +42,10 @@ export default function Footer() {
               </div>
             </div>
             <p className={styles.brandDesc}>
-              UAE-licensed professional firm providing technology-driven
-              financial advisory and business consultancy services across the
-              Emirates and internationally.
+              Ventum Consulting Partners provides consulting and project
+              development advisory for infrastructure, energy, and sustainability
+              — from concept and feasibility through financing and financial
+              close — across the GCC, MENA, and international markets.
             </p>
             <div className={styles.socials}>
               <a href="#" className={styles.social} aria-label="LinkedIn">
@@ -118,8 +120,8 @@ export default function Footer() {
             <h4 className={styles.columnTitle}>Get in Touch</h4>
             <div className={styles.contactInfo}>
               <p>United Arab Emirates</p>
-              <p>info@ventumconsulting.ae</p>
-              <p>+971 XX XXX XXXX</p>
+              <p>info@thevantumconsulting.com</p>
+              <p>+971 50 320 3691</p>
             </div>
           </div>
         </div>

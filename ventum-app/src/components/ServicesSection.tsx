@@ -4,323 +4,220 @@ import React from "react";
 import { FadeUp, StaggerContainer, StaggerItem } from "./ScrollAnimations";
 import styles from "./ServicesSection.module.css";
 
-const services = [
+const iconPaths = {
+  sun: (
+    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+  ),
+  droplet: <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />,
+  leaf: <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 2 8.8-1.5.5-3.5 1-5.4 1.8" />,
+  flame: <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-4-2.5-4-6a6 6 0 0 1 9.975 4.5" />,
+  tower: (
+    <>
+      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+    </>
+  ),
+  recycle: (
+    <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5M9.76 14.223 13.836 7.4M14 19h2.185a1.83 1.83 0 0 0 1.57-.881 1.785 1.785 0 0 0 .004-1.784L16.804 9.5M9.76 9.777 13.836 16.6" />
+  ),
+  trash: (
+    <>
+      <polyline points="3 6 5 6 21 6" />
+      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+    </>
+  ),
+  handshake: (
+    <path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L7 14M7 14l-1.2 3.8a1 1 0 0 0 .9 1.2h9.7" />
+  ),
+};
+
+const sectors = [
   {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <circle cx="18" cy="18" r="3" />
-        <circle cx="6" cy="6" r="3" />
-        <path d="M13 6h3a2 2 0 0 1 2 2v7" />
-        <path d="M11 18H8a2 2 0 0 1-2-2V9" />
-      </svg>
-    ),
-    title: "Mergers & Acquisitions",
-    description:
-      "Expert M&A advisory services guiding transactions from due diligence to successful integration.",
+    title: "Renewable Energy (Solar & Clean Energy)",
+    icon: iconPaths.sun,
   },
   {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-      </svg>
-    ),
-    title: "Financial Advisory & Planning",
-    description:
-      "Comprehensive financial planning consultancy to support informed decision-making and sustainable growth.",
+    title: "Water Security & Desalination Infrastructure",
+    icon: iconPaths.droplet,
   },
   {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" />
-        <path d="M3 5v14a2 2 0 0 0 2 2h16v-5" />
-        <path d="M18 12a2 2 0 0 0 0 4h4v-4z" />
-      </svg>
-    ),
-    title: "Loan Arrangements",
-    description:
-      "Strategic loan arrangement and financial structuring services for optimal capital acquisition.",
+    title: "Food Security & Agricultural Development",
+    icon: iconPaths.leaf,
   },
   {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <rect x="2" y="7" width="20" height="14" rx="2" />
-        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-      </svg>
-    ),
-    title: "Business & Management Consulting",
-    description:
-      "Strategic business consulting to optimize operations and drive organizational excellence.",
+    title: "LNG Terminals & Oil & Gas Infrastructure",
+    icon: iconPaths.flame,
   },
   {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <path d="M2 20h.01M7 20v-4M12 20v-8M17 20V8M22 4v16" />
-      </svg>
-    ),
-    title: "Corporate Strategy & Restructuring",
-    description:
-      "Corporate financial strategy and restructuring advisory to navigate complex business transformations.",
+    title: "Telecom Infrastructure & Cellular Tower Networks",
+    icon: iconPaths.tower,
   },
   {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <polyline points="14 2 14 8 20 8" />
-        <line x1="16" y1="13" x2="8" y2="13" />
-        <line x1="16" y1="17" x2="8" y2="17" />
-      </svg>
-    ),
-    title: "Feasibility Studies & Valuation",
-    description:
-      "In-depth financial feasibility studies and valuation advisory for strategic investment decisions.",
+    title: "Waste-to-Energy Projects",
+    icon: iconPaths.recycle,
   },
   {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-    title: "Risk Assessment & Controls",
-    description:
-      "Comprehensive risk assessment and internal financial controls advisory to safeguard business assets.",
+    title: "Recycling & Circular Economy Infrastructure",
+    icon: iconPaths.recycle,
   },
   {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <circle cx="12" cy="12" r="3" />
-        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-      </svg>
-    ),
-    title: "Engineering Services",
-    description:
-      "Professional engineering consultancy and technical advisory for infrastructure and development projects.",
+    title: "Waste Management Systems",
+    icon: iconPaths.trash,
   },
   {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <rect x="1" y="4" width="22" height="16" rx="2" />
-        <line x1="1" y1="10" x2="23" y2="10" />
-      </svg>
-    ),
-    title: "Quantity Surveying",
-    description:
-      "Expert quantity surveying services ensuring precise cost management throughout project lifecycles.",
-  },
-  {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <circle cx="11" cy="11" r="8" />
-        <path d="M21 21l-4.35-4.35" />
-      </svg>
-    ),
-    title: "Public & Marketing Research",
-    description:
-      "Comprehensive market research and public opinion analysis to inform strategic business decisions.",
-  },
-  {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-      </svg>
-    ),
-    title: "Product Launch & Entry Research",
-    description:
-      "Market entry research and product launch strategy consulting for successful market penetration.",
-  },
-  {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
-    title: "HR Advisory Services",
-    description:
-      "People-first HR advisory services including talent strategy, workforce planning, and organizational design.",
-  },
-  {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <polygon points="12 2 2 7 12 12 22 7 12 2" />
-        <polyline points="2 17 12 22 22 17" />
-        <polyline points="2 12 12 17 22 12" />
-      </svg>
-    ),
-    title: "Strategic Diagnostics & Feasibility",
-    description:
-      "In-depth business diagnostic studies and feasibility analysis to identify growth opportunities.",
-  },
-  {
-    icon: (
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-        <polyline points="9 22 9 12 15 12 15 22" />
-      </svg>
-    ),
-    title: "Landscaping Survey",
-    description:
-      "Professional design and landscaping survey services for real estate and urban development projects.",
+    title: "Concession-Based Infrastructure Projects (PPP / BOT / BOO models)",
+    icon: iconPaths.handshake,
   },
 ];
+
+const endToEndItems = [
+  "Project origination and opportunity identification",
+  "Support during Letter of Intent (LOI) and project award stage",
+  "Preparation of feasibility studies and bankable documentation",
+  "Licensing, regulatory approvals, and government permits",
+  "Land allocation and concession structuring",
+  "Structuring of offtake agreements and commercial contracts",
+  "Coordination with legal advisors, consultants, and technical experts",
+  "EPC contract structuring and negotiation",
+  "Operations & Maintenance (O&M) agreement structuring",
+  "Financial advisory and capital structuring",
+  "Engagement with commercial banks, investors, and development institutions",
+  "Arranging debt financing through Export Credit Agencies (ECAs), EXIM Banks, and international lenders",
+];
+
+const advisoryCapabilities: {
+  title: string;
+  body?: string;
+  items?: string[];
+}[] = [
+  {
+    title: "Project Development Advisory",
+    body:
+      "We assist clients in transforming early-stage project concepts into bankable infrastructure investments through feasibility development, regulatory approvals, commercial structuring, and project documentation.",
+  },
+  {
+    title: "Project Finance & Financial Advisory",
+    items: [
+      "Financial modeling and project finance structuring",
+      "Debt and equity structuring",
+      "Engagement with commercial banks and institutional investors",
+      "Structuring financing through Export Credit Agencies (ECAs) and EXIM banks",
+      "Negotiation support with lenders and financing institutions",
+      "Support during financing due diligence and financial close",
+    ],
+  },
+  {
+    title: "Public-Private Partnership (PPP) Advisory",
+    items: [
+      "PPP structuring and advisory",
+      "Concession agreement support",
+      "Risk allocation frameworks",
+      "Financial feasibility assessments",
+      "Transaction advisory for PPP projects",
+    ],
+  },
+  {
+    title: "Strategic Infrastructure Advisory",
+    items: [
+      "Infrastructure investment strategy development",
+      "Market entry and sector analysis",
+      "Strategic partnerships and joint ventures",
+      "Project acquisition and development advisory",
+    ],
+  },
+];
+
+function SectorIcon({ children }: { children: React.ReactNode }) {
+  return (
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      {children}
+    </svg>
+  );
+}
 
 export default function ServicesSection() {
   return (
     <section id="services" className={styles.section}>
       <div className={styles.container}>
         <FadeUp className={styles.header}>
-          <span className="section-label">Our Services</span>
+          <span className="section-label">Consulting &amp; Advisory Services</span>
           <h2 className="section-title">
-            Comprehensive Advisory
+            Strategic Advisory
             <br />
-            <span className="gold">Solutions</span>
+            <span className="gold">&amp; Project Development</span>
           </h2>
           <p className="section-description">
-            From financial planning to strategic consulting, we offer a full
-            spectrum of advisory services tailored to businesses operating in
-            the Gulf region and beyond.
+            With over 45 years of combined experience across the GCC and wider
+            MENA region, our team provides specialized financial advisory, project
+            development, and infrastructure structuring services to governments,
+            investors, developers, and corporate sponsors. Our expertise spans a
+            broad range of critical infrastructure and sustainability sectors
+            including renewable energy, water security, food security, telecom
+            infrastructure, LNG terminals, oil and gas infrastructure,
+            waste-to-energy, recycling, and concession-based infrastructure
+            projects.
           </p>
-          <div className={styles.feasibilityBlock}>
-            <h3 className={styles.feasibilityTitle}>
-              Preparing Technical &amp; Feasibility Studies of Projects and
-              Opportunities
-            </h3>
-            <p className={styles.feasibilityTags}>
-              Water, Clean Energy, Waste Management &amp; Recycling, Food
-              Security, Energy Efficiency &amp; Environmental Business Services
-            </p>
-            <p className={styles.feasibilitySubtitle}>
-              Ventum Consulting (Digital &amp; Sustainable Transformation
-              Services)
-            </p>
-            <ul className={styles.feasibilityList}>
-              <li>
-                Sustainable transformation strategy, including ESG integration at
-                both strategic and operational levels.
-              </li>
-              <li>
-                Data-driven feasibility assessments and KPI frameworks for
-                environmental business planning.
-              </li>
-              <li>
-                Process and organizational alignment for sustainability and
-                circular economy models.
-              </li>
-              <li>
-                Digitalization strategy to support operational and environmental
-                feasibility studies.
-              </li>
-            </ul>
-          </div>
+        </FadeUp>
+
+        <FadeUp className={styles.blockHeading}>
+          <h3 className={styles.blockTitle}>Sector expertise</h3>
         </FadeUp>
 
         <StaggerContainer className={styles.grid} staggerDelay={0.06}>
-          {services.map((service) => (
-            <StaggerItem key={service.title}>
+          {sectors.map((sector) => (
+            <StaggerItem key={sector.title}>
               <div className={styles.card}>
-                <div className={styles.cardIcon}>{service.icon}</div>
-                <h3 className={styles.cardTitle}>{service.title}</h3>
-                <p className={styles.cardDesc}>{service.description}</p>
+                <div className={styles.cardIcon}>
+                  <SectorIcon>{sector.icon}</SectorIcon>
+                </div>
+                <h3 className={styles.cardTitle}>{sector.title}</h3>
                 <div className={styles.cardLine} />
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+
+        <FadeUp className={styles.endToEnd}>
+          <h3 className={styles.blockTitle}>End-to-End Project Development Services</h3>
+          <p className={styles.endToEndIntro}>
+            We provide comprehensive project development and advisory support,
+            guiding projects from early-stage concept through bankability and
+            financial close. Our services include:
+          </p>
+          <ul className={styles.endToEndList}>
+            {endToEndItems.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </FadeUp>
+
+        <FadeUp className={styles.blockHeading}>
+          <h3 className={styles.blockTitle}>Our advisory capabilities</h3>
+        </FadeUp>
+
+        <StaggerContainer className={styles.capabilitiesGrid} staggerDelay={0.08}>
+          {advisoryCapabilities.map((cap) => (
+            <StaggerItem key={cap.title}>
+              <div className={styles.capabilityCard}>
+                <h4 className={styles.capabilityTitle}>{cap.title}</h4>
+                {cap.body ? (
+                  <p className={styles.capabilityBody}>{cap.body}</p>
+                ) : null}
+                {cap.items ? (
+                  <ul className={styles.capabilityList}>
+                    {cap.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                ) : null}
               </div>
             </StaggerItem>
           ))}

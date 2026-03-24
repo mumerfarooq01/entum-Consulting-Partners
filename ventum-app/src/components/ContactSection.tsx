@@ -37,7 +37,7 @@ const contactInfo = [
       </svg>
     ),
     label: "Email",
-    value: "info@ventumconsulting.ae",
+    value: "info@thevantumconsulting.com",
   },
   {
     icon: (
@@ -53,7 +53,7 @@ const contactInfo = [
       </svg>
     ),
     label: "Phone",
-    value: "+971 XX XXX XXXX",
+    value: "+971 50 320 3691",
   },
   {
     icon: (
@@ -71,7 +71,7 @@ const contactInfo = [
       </svg>
     ),
     label: "Coverage",
-    value: "UAE & International",
+    value: "GCC, MENA & International",
   },
 ];
 
@@ -102,13 +102,14 @@ export default function ContactSection() {
         <FadeUp className={styles.header}>
           <span className="section-label">Contact</span>
           <h2 className="section-title">
-            Let&apos;s Build Your
+            Develop Your Next
             <br />
-            <span className="gold">Financial Future</span>
+            <span className="gold">Infrastructure Project</span>
           </h2>
           <p className="section-description">
-            Ready to take the next step? Get in touch with our advisory team for
-            a confidential consultation.
+            Discuss project origination, feasibility, PPP and concession
+            structuring, or financing with our advisory team — confidentially and
+            without obligation.
           </p>
         </FadeUp>
 
@@ -158,7 +159,7 @@ export default function ContactSection() {
                 <textarea
                   name="message"
                   className={styles.textarea}
-                  placeholder="Tell us about your advisory needs..."
+                  placeholder="Tell us about your project or advisory needs..."
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
@@ -210,7 +211,7 @@ export default function ContactSection() {
                 </svg>
                 <span>United Arab Emirates</span>
                 <span className={styles.mapSub}>
-                  Serving all 7 Emirates & International Markets
+                  Infrastructure advisory across the GCC, MENA, and beyond
                 </span>
               </div>
             </div>

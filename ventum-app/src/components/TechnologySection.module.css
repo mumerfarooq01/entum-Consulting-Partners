@@ -40,6 +40,35 @@
   margin-bottom: 64px;
 }
 
+.subHeader {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 72px auto 48px;
+  max-width: 720px;
+}
+
+.subHeader .section-label::before {
+  display: none;
+}
+
+.subTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  margin: 12px 0 16px;
+}
+
+.subDesc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

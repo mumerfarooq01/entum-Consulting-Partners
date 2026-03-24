@@ -5,10 +5,14 @@ import { FadeUp, SlideLeft, SlideRight } from "./ScrollAnimations";
 import styles from "./AboutSection.module.css";
 
 const stats = [
-  { number: "45+", label: "Years", desc: "Industry Experience" },
-  { number: "7", label: "Emirates", desc: "Full UAE Coverage" },
-  { number: "16+", label: "Services", desc: "Advisory Domains" },
-  { number: "100%", label: "Compliant", desc: "UAE Regulations" },
+  { number: "45+", label: "Years", desc: "Combined regional experience" },
+  { number: "Multi", label: "Sectors", desc: "Infrastructure & energy" },
+  { number: "Global", label: "Network", desc: "DFIs, ECAs & partners" },
+  {
+    number: "Full",
+    label: "Lifecycle",
+    desc: "Concept to financial close",
+  },
 ];
 
 export default function AboutSection() {
@@ -19,29 +23,31 @@ export default function AboutSection() {
           <SlideLeft className={styles.left}>
             <span className="section-label">About Us</span>
             <h2 className="section-title">
-              UAE-Based Advisory.
+              Infrastructure, Energy
               <br />
-              <span className="gold">Global Reach.</span>
+              <span className="gold">&amp; Sustainability</span>
             </h2>
             <p className="section-description">
-              With over 45 years of industry experience, Ventum Consulting
-              Partners is a UAE-licensed professional firm providing financial
-              advisory and business consultancy services. Operating from the
-              United Arab Emirates, we deliver technology-driven, compliant, and
-              globally aligned advisory solutions to clients across all Emirates
-              and internationally.
+              We are an international consulting and project development advisory
+              firm specializing in infrastructure, energy, and sustainability
+              projects. Ventum Consulting Partners combines deep financial
+              advisory expertise with hands-on project development experience,
+              supporting clients in delivering complex infrastructure investments
+              across emerging and developed markets. With over 45 years of
+              combined regional experience, we provide strategic advisory
+              services to governments, infrastructure developers, investment
+              funds, corporate sponsors, and technology providers.
             </p>
             <p className={styles.secondPara}>
-              Our advisory services are designed to support informed financial
-              decision-making, operational efficiency, and sustainable business
-              growth for SMEs, corporates, and entrepreneurs.
-            </p>
-            <p className={styles.secondPara}>
-              Ventum Consulting is an independent management and transformation
-              consultancy with nearly 20 years of experience integrating
-              strategy, sustainability, and digital transformation into business
-              models across sectors. Our services help organizations align
-              operational capability with environmental and ESG objectives.
+              <strong>Leadership.</strong> Our leadership team brings decades of
+              experience in infrastructure development, project finance, and
+              international investment advisory. The team has worked on
+              large-scale infrastructure projects involving renewable energy,
+              water security, telecom infrastructure, oil and gas assets, and
+              environmental infrastructure across multiple regions. We work
+              closely with governments, financial institutions, EPC contractors,
+              and investors to transform strategic infrastructure concepts into
+              bankable and investable projects.
             </p>
             <div className={styles.features}>
               <div className={styles.feature}>
@@ -58,7 +64,7 @@ export default function AboutSection() {
                     <polyline points="22 4 12 14.01 9 11.01" />
                   </svg>
                 </div>
-                <span>Non-regulated advisory services</span>
+                <span>Project development &amp; bankability</span>
               </div>
               <div className={styles.feature}>
                 <div className={styles.featureIcon}>
@@ -74,7 +80,7 @@ export default function AboutSection() {
                     <polyline points="22 4 12 14.01 9 11.01" />
                   </svg>
                 </div>
-                <span>On-site, remote & digital models</span>
+                <span>PPP, concessions &amp; commercial structuring</span>
               </div>
               <div className={styles.feature}>
                 <div className={styles.featureIcon}>
@@ -90,7 +96,7 @@ export default function AboutSection() {
                     <polyline points="22 4 12 14.01 9 11.01" />
                   </svg>
                 </div>
-                <span>Transparent & ethical practices</span>
+                <span>International financing &amp; ECAs</span>
               </div>
             </div>
           </SlideLeft>

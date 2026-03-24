@@ -2,23 +2,27 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ventum Consulting Partners | Financial Advisory Without Borders",
+  title:
+    "Ventum Consulting Partners | Strategic Advisory & Infrastructure Project Development",
   description:
-    "Ventum Consulting Partners is a UAE-licensed professional firm providing technology-driven financial advisory and business consultancy services across the Emirates and internationally.",
+    "Consulting and project development advisory for infrastructure, energy, and sustainability — financial structuring, PPP/concessions, feasibility, and international financing across the GCC, MENA, Africa, Europe, and South Asia.",
   keywords: [
-    "financial advisory",
-    "business consulting",
-    "UAE",
-    "consulting partners",
-    "financial planning",
-    "mergers acquisitions",
-    "risk assessment",
-    "corporate strategy",
+    "infrastructure advisory",
+    "project development",
+    "project finance",
+    "PPP advisory",
+    "GCC",
+    "MENA",
+    "feasibility studies",
+    "ECA financing",
+    "renewable energy",
+    "water infrastructure",
   ],
   openGraph: {
-    title: "Ventum Consulting Partners | Financial Advisory Without Borders",
+    title:
+      "Ventum Consulting Partners | Strategic Advisory & Infrastructure Project Development",
     description:
-      "Technology-driven, compliant, and globally aligned advisory solutions for SMEs, corporates, and entrepreneurs.",
+      "From concept to bankability: project development, structuring, and financing for infrastructure and energy projects.",
     type: "website",
     locale: "en_AE",
   },

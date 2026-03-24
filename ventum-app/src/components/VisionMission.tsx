@@ -25,9 +25,10 @@ export default function VisionMission() {
               <div className={styles.cardTag}>Vision</div>
               <h3 className={styles.cardTitle}>Where We&apos;re Headed</h3>
               <p className={styles.cardText}>
-                To be a trusted financial advisory firm delivering innovative
-                and technology-enabled financial solutions across the UAE and
-                global markets.
+                To be a trusted consulting and project development partner for
+                infrastructure, energy, and sustainability — helping sponsors
+                turn complex projects into bankable, finance-ready investments
+                across the GCC, MENA, and international markets.
               </p>
               <div className={styles.cardDecor}>
                 <motion.div
@@ -51,18 +52,19 @@ export default function VisionMission() {
               <ul className={styles.missionList}>
                 <li>
                   <span className={styles.bullet} />
-                  Deliver transparent, ethical, and compliant financial advisory
-                  services
+                  Deliver independent advisory that aligns projects with
+                  international project finance and regulatory expectations
                 </li>
                 <li>
                   <span className={styles.bullet} />
-                  Combine financial expertise with technology and analytics for
-                  superior outcomes
+                  Combine financial structuring, technical coordination, and
+                  stakeholder engagement from concept through financial close
                 </li>
                 <li>
                   <span className={styles.bullet} />
-                  Support sustainable business growth locally and
-                  internationally
+                  Serve governments, investors, developers, and sponsors with
+                  integrity across critical infrastructure and sustainability
+                  sectors
                 </li>
               </ul>
               <div className={styles.cardDecor}>
@@ -84,7 +86,7 @@ export default function VisionMission() {
         <FadeUp className={styles.taglines} delay={0.3}>
           <div className={styles.tagline}>
             <span className={styles.tagQuote}>&ldquo;</span>
-            Transparent. Compliant. Forward-Thinking.
+            Bankable projects. Trusted partners. Sustainable infrastructure.
             <span className={styles.tagQuote}>&rdquo;</span>
           </div>
         </FadeUp>

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { FadeUp, StaggerContainer, StaggerItem } from "./ScrollAnimations";
 import styles from "./TechnologySection.module.css";
 
-const features = [
+const financingSolutions = [
   {
     icon: (
       <svg
@@ -16,13 +16,14 @@ const features = [
         stroke="currentColor"
         strokeWidth="1.5"
       >
-        <path d="M3 3v18h18" />
-        <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" />
+        <circle cx="12" cy="12" r="10" />
+        <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+        <path d="M12 18V6" />
       </svg>
     ),
-    title: "Financial Analytics & Reporting",
+    title: "Access to International Financing",
     description:
-      "Advanced analytics dashboards delivering real-time financial insights and comprehensive reporting.",
+      "International commercial banks; Export Credit Agencies (ECAs); development finance institutions (DFIs); infrastructure investment funds; institutional investors and private equity firms.",
   },
   {
     icon: (
@@ -34,21 +35,13 @@ const features = [
         stroke="currentColor"
         strokeWidth="1.5"
       >
-        <rect x="4" y="4" width="16" height="16" rx="2" />
-        <rect x="9" y="9" width="6" height="6" />
-        <line x1="9" y1="2" x2="9" y2="4" />
-        <line x1="15" y1="2" x2="15" y2="4" />
-        <line x1="9" y1="20" x2="9" y2="22" />
-        <line x1="15" y1="20" x2="15" y2="22" />
-        <line x1="20" y1="9" x2="22" y2="9" />
-        <line x1="20" y1="15" x2="22" y2="15" />
-        <line x1="2" y1="9" x2="4" y2="9" />
-        <line x1="2" y1="15" x2="4" y2="15" />
+        <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4" />
+        <path d="M9 9v0M9 12v0M9 15v0M9 18v0" />
       </svg>
     ),
-    title: "Digital Budgeting Models",
+    title: "Export Credit Agency (ECA) Financing",
     description:
-      "AI-powered digital budgeting and forecasting models with predictive analytics capabilities.",
+      "We assist clients in structuring financing supported by ECAs, supplier credit structures, buyer credit facilities, and government-backed financing programs that often provide longer tenors and competitive interest rates.",
   },
   {
     icon: (
@@ -60,12 +53,13 @@ const features = [
         stroke="currentColor"
         strokeWidth="1.5"
       >
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+        <rect x="2" y="7" width="20" height="14" rx="2" />
+        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
       </svg>
     ),
-    title: "KPI Performance Monitoring",
+    title: "Structured Project Finance",
     description:
-      "Real-time KPI-based financial performance monitoring with automated alerts and benchmarking.",
+      "Non-recourse and limited recourse financing structures; debt structuring and repayment profiles; risk allocation among project stakeholders; security structures and financing covenants.",
   },
   {
     icon: (
@@ -77,13 +71,34 @@ const features = [
         stroke="currentColor"
         strokeWidth="1.5"
       >
-        <circle cx="12" cy="12" r="3" />
-        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+        <polyline points="22 4 12 14.01 9 11.01" />
       </svg>
     ),
-    title: "Process Automation",
+    title: "Financial Close & Transaction Execution",
     description:
-      "Finance process optimization and automation advisory for enhanced operational efficiency.",
+      "Lender negotiations; documentation coordination with legal advisors; financial due diligence support; closing conditions and funding arrangements.",
+  },
+];
+
+const globalPartners = [
+  {
+    icon: (
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      >
+        <line x1="12" y1="1" x2="12" y2="23" />
+        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+      </svg>
+    ),
+    title: "Financial Institutions",
+    description:
+      "We maintain working relationships with international commercial banks, development finance institutions, export credit agencies, sovereign investors, and infrastructure funds.",
   },
   {
     icon: (
@@ -95,12 +110,12 @@ const features = [
         stroke="currentColor"
         strokeWidth="1.5"
       >
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
       </svg>
     ),
-    title: "Secure Data Handling",
+    title: "Technology Providers & EPC Contractors",
     description:
-      "Enterprise-grade digital data handling with advanced confidentiality and security protocols.",
+      "Our network includes engineering firms, technology providers, and EPC contractors specializing in renewable energy, water treatment, waste management, and industrial infrastructure.",
   },
   {
     icon: (
@@ -112,19 +127,37 @@ const features = [
         stroke="currentColor"
         strokeWidth="1.5"
       >
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
       </svg>
     ),
-    title: "Energy Efficiency System Integration",
+    title: "Government & Institutional Stakeholders",
     description:
-      "Smart energy efficiency solutions integrating advanced systems to optimize consumption and reduce operational costs.",
+      "We assist clients in navigating licensing frameworks, regulatory approvals, concession agreements, and public-private partnership structures across multiple jurisdictions.",
   },
 ];
 
 export default function TechnologySection() {
+  const renderCard = (
+    item: (typeof financingSolutions)[0],
+    key: string,
+    index: number,
+  ) => {
+    const num = index + 1 < 10 ? `0${index + 1}` : String(index + 1);
+    return (
+      <StaggerItem key={key}>
+        <div className={styles.featureCard}>
+          <div className={styles.featureNumber}>{num}</div>
+          <div className={styles.featureIcon}>{item.icon}</div>
+          <h3 className={styles.featureTitle}>{item.title}</h3>
+          <p className={styles.featureDesc}>{item.description}</p>
+        </div>
+      </StaggerItem>
+    );
+  };
+
   return (
-    <section id="technology" className={styles.section}>
-      {/* Background decorative grid */}
+    <section id="financing" className={styles.section}>
       <div className={styles.bgGrid}>
         {Array.from({ length: 30 }).map((_, i) => (
           <motion.div
@@ -138,29 +171,42 @@ export default function TechnologySection() {
 
       <div className={styles.container}>
         <FadeUp className={styles.header}>
-          <span className="section-label">Technology</span>
+          <span className="section-label">Investor &amp; Financing Solutions</span>
           <h2 className="section-title">
-            Smart Financial Decisions,
+            Capital Aligned With
             <br />
-            <span className="gold">Powered by Data</span>
+            <span className="gold">Project Finance Standards</span>
           </h2>
           <p className="section-description">
-            We leverage advanced financial tools and digital platforms to
-            enhance advisory outcomes with precision, speed, and security.
+            Infrastructure projects require strong access to long-term capital
+            and financing partners. Our team assists clients in structuring
+            financing solutions aligned with international project finance
+            standards.
           </p>
         </FadeUp>
 
         <StaggerContainer className={styles.grid} staggerDelay={0.12}>
-          {features.map((feature, index) => (
-            <StaggerItem key={feature.title}>
-              <div className={styles.featureCard}>
-                <div className={styles.featureNumber}>0{index + 1}</div>
-                <div className={styles.featureIcon}>{feature.icon}</div>
-                <h3 className={styles.featureTitle}>{feature.title}</h3>
-                <p className={styles.featureDesc}>{feature.description}</p>
-              </div>
-            </StaggerItem>
-          ))}
+          {financingSolutions.map((item, i) =>
+            renderCard(item, `fin-${item.title}`, i),
+          )}
+        </StaggerContainer>
+
+        <FadeUp className={styles.subHeader}>
+          <span className="section-label">Partnership</span>
+          <h3 className={styles.subTitle}>
+            Our Global Partners <span className="gold">&amp; Network</span>
+          </h3>
+          <p className={styles.subDesc}>
+            Successful infrastructure projects require collaboration between
+            financial institutions, technology providers, EPC contractors, and
+            government stakeholders.
+          </p>
+        </FadeUp>
+
+        <StaggerContainer className={styles.grid} staggerDelay={0.12}>
+          {globalPartners.map((item, i) =>
+            renderCard(item, `gp-${item.title}`, financingSolutions.length + i),
+          )}
         </StaggerContainer>
       </div>
     </section>

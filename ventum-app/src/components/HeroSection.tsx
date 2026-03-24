@@ -60,7 +60,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className={styles.badgeDot} />
-            Licensed Financial Advisory
+            Consulting &amp; Advisory Services
           </motion.div>
 
           <motion.h1
@@ -69,9 +69,9 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.4 }}
           >
-            Financial Advisory
+            Strategic Advisory
             <br />
-            <span className={styles.titleGold}>Without Borders</span>
+            <span className={styles.titleGold}>&amp; Project Development</span>
           </motion.h1>
 
           <motion.p
@@ -80,9 +80,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Technology-driven, compliant, and globally aligned advisory
-            solutions for SMEs, corporates, and entrepreneurs across the UAE and
-            beyond.
+         With over 45 years of combined experience across the GCC and wider MENA region, our team provides specialized financial advisory, project development, and infrastructure structuring services to governments, investors, developers, and corporate sponsors.
           </motion.p>
 
           <motion.div
@@ -118,18 +116,18 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 1.1 }}
           >
             <div className={styles.stat}>
-              <span className={styles.statNumber}>7</span>
-              <span className={styles.statLabel}>Emirates Covered</span>
+              <span className={styles.statNumber}>45+</span>
+              <span className={styles.statLabel}>Combined Years</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <span className={styles.statNumber}>16+</span>
-              <span className={styles.statLabel}>Service Areas</span>
+              <span className={styles.statNumber}>GCC</span>
+              <span className={styles.statLabel}>&amp; MENA Focus</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
               <span className={styles.statNumber}>Global</span>
-              <span className={styles.statLabel}>Advisory Reach</span>
+              <span className={styles.statLabel}>Partners &amp; Network</span>
             </div>
           </motion.div>
         </div>
