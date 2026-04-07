@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { FadeUp, SlideLeft, SlideRight } from "./ScrollAnimations";
 import styles from "./AboutSection.module.css";
 
@@ -33,21 +34,7 @@ export default function AboutSection() {
               projects. Ventum Consulting Partners combines deep financial
               advisory expertise with hands-on project development experience,
               supporting clients in delivering complex infrastructure investments
-              across emerging and developed markets. With over 45 years of
-              combined regional experience, we provide strategic advisory
-              services to governments, infrastructure developers, investment
-              funds, corporate sponsors, and technology providers.
-            </p>
-            <p className={styles.secondPara}>
-              <strong>Leadership.</strong> Our leadership team brings decades of
-              experience in infrastructure development, project finance, and
-              international investment advisory. The team has worked on
-              large-scale infrastructure projects involving renewable energy,
-              water security, telecom infrastructure, oil and gas assets, and
-              environmental infrastructure across multiple regions. We work
-              closely with governments, financial institutions, EPC contractors,
-              and investors to transform strategic infrastructure concepts into
-              bankable and investable projects.
+              across emerging and developed markets.
             </p>
             <div className={styles.features}>
               <div className={styles.feature}>
@@ -102,16 +89,29 @@ export default function AboutSection() {
           </SlideLeft>
 
           <SlideRight className={styles.right}>
-            <div className={styles.statsGrid}>
-              {stats.map((stat, i) => (
-                <FadeUp key={stat.label} delay={i * 0.1}>
-                  <div className={styles.statCard}>
-                    <span className={styles.statNumber}>{stat.number}</span>
-                    <span className={styles.statLabel}>{stat.label}</span>
-                    <span className={styles.statDesc}>{stat.desc}</span>
-                  </div>
-                </FadeUp>
-              ))}
+            {/* Image replacing the old text-only right column */}
+            <div className={styles.imageContainer}>
+              <Image
+                src="/about-skyline.png"
+                alt="Dubai skyline at golden hour"
+                fill
+                style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className={styles.aboutImage}
+              />
+              <div className={styles.imageOverlay} />
+              {/* Stats overlay on the image */}
+              <div className={styles.statsOverlay}>
+                {stats.map((stat, i) => (
+                  <FadeUp key={stat.label} delay={i * 0.1}>
+                    <div className={styles.statCard}>
+                      <span className={styles.statNumber}>{stat.number}</span>
+                      <span className={styles.statLabel}>{stat.label}</span>
+                      <span className={styles.statDesc}>{stat.desc}</span>
+                    </div>
+                  </FadeUp>
+                ))}
+              </div>
             </div>
           </SlideRight>
         </div>

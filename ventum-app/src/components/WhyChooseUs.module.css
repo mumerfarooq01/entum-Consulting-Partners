@@ -1,154 +1,228 @@
 .section {
   padding: var(--section-padding);
+  background: var(--color-bg-secondary);
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
-    180deg,
-    var(--color-bg-secondary) 0%,
-    var(--color-bg-primary) 100%
-  );
+}
+
+.bgDecor {
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 169, 97, 0.06) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
 }
 
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: var(--container-padding);
+  position: relative;
+  z-index: 2;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 64px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 60px;
 }
 
-.header .section-label::before {
-  display: none;
+/* ============ Two-column layout ============ */
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 50px;
+  align-items: start;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
+
+/* ============ Cards ============ */
 
 .card {
-  position: relative;
+  padding: 28px 24px;
   background: var(--color-bg-card);
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border);
   border-radius: 16px;
-  padding: 40px 28px 36px;
-  text-align: center;
-  transition: var(--transition-base);
-  overflow: hidden;
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--color-gold),
-    transparent
-  );
-  opacity: 0;
   transition: var(--transition-base);
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  border-color: var(--color-border);
+  transform: translateY(-3px);
+  border-color: rgba(200, 169, 97, 0.3);
   box-shadow: var(--shadow-glow);
 }
 
-.card:hover::before {
-  opacity: 1;
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
 }
 
 .iconWrapper {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: linear-gradient(
-    135deg,
-    rgba(200, 169, 97, 0.1),
-    rgba(200, 169, 97, 0.03)
-  );
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(200, 169, 97, 0.1);
   border: 1px solid rgba(200, 169, 97, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 24px;
   color: var(--color-gold);
-  transition: var(--transition-base);
-}
-
-.card:hover .iconWrapper {
-  background: linear-gradient(
-    135deg,
-    rgba(200, 169, 97, 0.2),
-    rgba(200, 169, 97, 0.05)
-  );
-  box-shadow: 0 0 30px rgba(200, 169, 97, 0.15);
 }
 
 .number {
   font-family: var(--font-serif);
-  font-size: 2.8rem;
+  font-size: 1.6rem;
   font-weight: 800;
-  color: var(--color-gold);
-  line-height: 1;
-  margin-bottom: 8px;
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .cardTitle {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--color-text-primary);
-  margin-bottom: 12px;
-  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .cardDesc {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--color-text-secondary);
   line-height: 1.7;
+  margin-bottom: 16px;
 }
 
-/* Decorative background */
-.bgDecor {
+/* ============ Progress Bars ============ */
+
+.progressTrack {
+  width: 100%;
+  height: 4px;
+  background: rgba(200, 169, 97, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-gold-dark), var(--color-gold), var(--color-gold-light));
+  border-radius: 2px;
+}
+
+/* ============ Donut Chart ============ */
+
+.chartWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 36px 30px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  position: sticky;
+  top: 120px;
+}
+
+.chartContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.donut {
+  width: 100%;
+  height: 100%;
+}
+
+.chartCenter {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(200, 169, 97, 0.03) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
+.chartCenterValue {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-gold);
+}
+
+.chartCenterLabel {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.chartTitle {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+}
+
+.legend {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.legendPct {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============ Responsive ============ */
+
+@media (max-width: 900px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+
+  .chartWrapper {
+    position: static;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
-  }
-  .number {
-    font-size: 2.2rem;
   }
 }
