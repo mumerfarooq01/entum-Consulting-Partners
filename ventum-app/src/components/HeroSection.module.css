@@ -4,9 +4,22 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: radial-gradient(ellipse at 20% 50%, rgba(200, 169, 97, 0.06) 0%, transparent 60%),
-              radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.04) 0%, transparent 50%),
-              var(--color-bg-primary);
+  background: var(--color-bg-primary);
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(5, 10, 21, 0.7) 0%, rgba(5, 10, 21, 0.5) 40%, rgba(5, 10, 21, 0.85) 100%),
+    linear-gradient(90deg, rgba(5, 10, 21, 0.9) 0%, rgba(5, 10, 21, 0.3) 60%, rgba(5, 10, 21, 0.6) 100%);
 }
 
 .bgElements {

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import styles from "./HeroSection.module.css";
 
@@ -12,6 +13,19 @@ export default function HeroSection() {
 
   return (
     <section id="home" className={styles.hero}>
+      {/* Background image */}
+      <div className={styles.bgImage}>
+        <Image
+          src="/hero-bg.png"
+          alt="Infrastructure and solar energy landscape"
+          fill
+          priority
+          style={{ objectFit: "cover", objectPosition: "center 40%" }}
+          quality={90}
+        />
+        <div className={styles.bgOverlay} />
+      </div>
+
       {/* Animated background elements */}
       <div className={styles.bgElements}>
         <div className={styles.gridOverlay} />
@@ -32,11 +46,6 @@ export default function HeroSection() {
             scale: [1, 0.9, 1.15, 1],
           }}
           transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className={styles.orbThree}
-          animate={{ x: [0, 20, -30, 0], y: [0, -30, 20, 0] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
         />
         {/* Floating geometric shapes */}
         <motion.div
